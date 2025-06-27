@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Locomotora SVG</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    body {
+      display: flex;
+      justify-content: center; /* centra horizontal */
+      align-items: center;     /* centra vertical */
+      background: #f9f9f9;
+      height: 100vh;
+    }
+    svg {
+      border: 1px solid #ccc;
+      background: #fff;
+      width: 400px;
+      height: 400px;
+      /* opcional para que no se estire */
+      flex-shrink: 0;
+    }
+    polygon, rect, ellipse, line, path {
+      fill: none;
+      stroke: black;
+      stroke-width: 1;
+    }
+  </style>
+</head>
+<body>
+  <svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+
+    <!-- base -->
+    <rect x="74" y="250" width="221" height="25" rx="0" ry="0" />
+
+    <!-- chimeneas (cal1 a cal5) con bordes redondeados -->
+    <rect x="170" y="140" width="25" height="103" rx="20" ry="20" />
+    <rect x="199" y="140" width="25" height="103" rx="20" ry="20" />
+    <rect x="228" y="140" width="25" height="103" rx="20" ry="20" />
+    <rect x="257" y="140" width="25" height="103" rx="20" ry="20" />
+    <rect x="286" y="140" width="25" height="103" rx="20" ry="20" />
+
+    <!-- ch -->
+    <rect x="289" y="105" width="19" height="43" />
+
+    <!-- polígono poly1 -->
+    <polygon points="311,65 322,85 311,105 286,105 275,85 286,65" />
+
+    <!-- fr -->
+    <rect x="314" y="170" width="10" height="40" />
+
+    <!-- polígono poly2 -->
+    <polygon points="314,235 350,287 297,287 297,235" />
+
+    <!-- cab -->
+    <rect x="90" y="174" width="77" height="35" />
+
+    <!-- at -->
+    <rect x="76" y="170" width="10" height="40" />
+
+    <!-- tec -->
+    <rect x="87" y="70" width="80" height="30" />
+
+    <!-- líneas -->
+    <line x1="95" y1="100" x2="120" y2="174" />
+    <line x1="160" y1="100" x2="160" y2="174" />
+    <line x1="90" y1="210" x2="107" y2="240" />
+    <line x1="107" y1="240" x2="167" y2="240" />
+    <line x1="167" y1="210" x2="167" y2="240" />
+
+    <!-- ruedas grandes -->
+    <ellipse cx="130" cy="263" rx="40" ry="40" />
+    <ellipse cx="252" cy="263" rx="40" ry="40" />
+
+    <!-- ruedas pequeñas, centradas en las ruedas grandes -->
+    <ellipse cx="130" cy="263" rx="10" ry="10" />
+    <ellipse cx="252" cy="263" rx="10" ry="10" />
+  </svg>
+</body>
+</html>
